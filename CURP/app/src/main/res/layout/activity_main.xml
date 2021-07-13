@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/nombretxt"
+        android:id="@+id/nombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -27,7 +27,7 @@
         tools:ignore="MissingConstraints"/>
 
     <EditText
-        android:id="@+id/apellidotxt"
+        android:id="@+id/apellidoP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -45,7 +45,7 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/apellido2txt"
+        android:id="@+id/apellidoM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -63,7 +63,7 @@
         tools:ignore="MissingConstraints"/>
 
     <RadioGroup
-        android:id="@+id/radio_G"
+        android:id="@+id/genero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -77,20 +77,20 @@
         tools:ignore="MissingConstraints">
 
         <RadioButton
-            android:id="@+id/radio_H"
+            android:id="@+id/hombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/hombre"></RadioButton>
 
         <RadioButton
-            android:id="@+id/radio_M"
+            android:id="@+id/mujer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/mujer"></RadioButton>
     </RadioGroup>
 
     <EditText
-        android:id="@+id/fechaText"
+        android:id="@+id/nacimiento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -124,7 +124,7 @@
         tools:ignore="MissingConstraints"/>
 
     <TextView
-        android:id="@+id/Estadotxt"
+        android:id="@+id/origen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -155,14 +155,13 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/btncrear"
+        android:id="@+id/btnGenerar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginRight="50dp"
+        android:layout_marginRight="150dp"
         android:layout_marginTop="500dp"
         android:text="@string/generar"
-        app:layout_constraintEnd_toStartOf="@+id/btnlimpiar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -173,7 +172,7 @@
         />
 
     <Button
-        android:id="@+id/btnlimpiar"
+        android:id="@+id/btnBorrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"

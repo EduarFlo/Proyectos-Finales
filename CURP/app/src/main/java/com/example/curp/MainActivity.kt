@@ -30,14 +30,14 @@ class MainActivity : AppCompatActivity() {
                 id: Long
             ) {
                 val estado = (estados[position])
-                Estadotxt.setText(estado)
+                origen.setText(estado)
             }
             override fun onNothingSelected(parent: AdapterView<*>?) {
             }
 
         }
 
-        fechaText.setOnClickListener {
+        nacimiento.setOnClickListener {
             val datePicker = DatePickerFragment { day, month, year ->
                 var mes = (month + 1).toString()
                 if (mes.toInt() < 10) {
@@ -47,27 +47,27 @@ class MainActivity : AppCompatActivity() {
                 if (dia.toInt() < 10) {
                     dia = "0" + dia
                 }
-                fechaText.setText("$dia/$mes/$year")
+                nacimiento.setText("$dia/$mes/$year")
             }
             datePicker.show(supportFragmentManager, "datePicker")
         }
 
-        radio_G.setOnCheckedChangeListener { group, i ->
-            if (i == R.id.radio_H)
-                sexo = radio_H.text[0].toString()
+        genero.setOnCheckedChangeListener { group, i ->
+            if (i == R.id.hombre)
+                sexo = hombre.text[0].toString()
             Toast.makeText(this,sexo, Toast.LENGTH_SHORT).show()
-            if (i == R.id.radio_M)
-                sexo = radio_M.text[0].toString()
+            if (i == R.id.mujer)
+                sexo = mujer.text[0].toString()
             Toast.makeText(this,sexo, Toast.LENGTH_SHORT).show()
         }
 
 
-        btncrear.setOnClickListener {
-            val nombre = nombretxt.text
-            val apellido1 = apellidotxt.text
-            val apellido2 = apellido2txt.text
+        btnGenerar.setOnClickListener {
+            val nombre =nombre.text
+            val apellido1 = apellidoP.text
+            val apellido2 = apellidoM.text
             var apellidoVocal = removerconsonante(apellido1.toString())
-            val fecha = fechaText.text.toString()
+            val fecha = nacimiento.text.toString()
             val consonanteapellido1 = removervocal(apellido1.toString())
             val consonanteapellido2 = removervocal(apellido2.toString())
             val consonantenombre = removervocal(nombre.toString())
@@ -114,8 +114,8 @@ class MainActivity : AppCompatActivity() {
                 var valor9 = fecha[0]
                 var valor10 = fecha[1]
                 var valor11 = sexo
-                var valor12 = Estadotxt.text[0]
-                var valor13 = Estadotxt.text[1]
+                var valor12 = origen.text[0]
+                var valor13 = origen.text[1]
                 val valor17 = valores.random()
                 val valor18 = valores.random()
 
@@ -123,16 +123,16 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
-        btnlimpiar.setOnClickListener {
-            var nombre = findViewById<EditText>(R.id.nombretxt)
+        btnBorrar.setOnClickListener {
+            var nombre = findViewById<EditText>(R.id.nombre)
             nombre.text.clear()
-            var apellido = findViewById<EditText>(R.id.apellidotxt)
+            var apellido = findViewById<EditText>(R.id.apellidoP)
             apellido.text.clear()
-            var apellido2 = findViewById<EditText>(R.id.apellido2txt)
+            var apellido2 = findViewById<EditText>(R.id.apellidoM)
             apellido2.text.clear()
-            var fecha = findViewById<TextView>(R.id.fechaText)
+            var fecha = findViewById<TextView>(R.id.nacimiento)
             fecha.setText("")
-            var estado = findViewById<TextView>(R.id.Estadotxt)
+            var estado = findViewById<TextView>(R.id.origen)
             estado.setText("")
             var curp = findViewById<TextView>(R.id.curp)
             curp.setText("")
