@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CURP</string>
+    <string name="nombre">Nombre(s)</string>
+    <string name="apellidoPat">Apellido Paterno</string>
+    <string name="apellidoMat">Apellido Materno</string>
+    <string name="hombre">Hombre</string>
+    <string name="mujer">Mujer</string>
+    <string name="fecha">Fecha de Nacimiento</string>
+    <string name="estado">Estado</string>
+    <string name="curp">CURP Generado</string>
+    <string name="generar">Generar</string>
+    <string name="borrar">Borrar</string>
+</resources>
